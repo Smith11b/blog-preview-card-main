@@ -1,0 +1,132 @@
+:root {
+    --yellow: rgb(244, 208, 78);
+    --gray-950: rgb(17, 17, 17);
+    --gray-500: rgb(107, 107, 107);
+    --spacing-50: 4px;
+    --spacing-100: 8px;
+    --spacing-150: 12px;
+    --spacing-300: 24px;
+}
+
+
+.text-preset-1 {
+    font-family: Figtree;
+    font-size: var(--spacing-200, 24px);
+    font-style: normal;
+    font-weight: 800;
+    line-height: 150%;
+    /* 36px */
+    letter-spacing: 0px;
+}
+
+;
+
+.text-preset-2 {
+    color: var(--color-gray-950, #111);
+    font-family: Figtree;
+    font-size: var(--font-size-text-preset-2, 16px);
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+    /* 24px */
+    letter-spacing: 0px;
+}
+
+.text-preset-3 {
+    font-family: Figtree;
+    font-size: var(--font-size-text-preset-3, 14px);
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+    /* 21px */
+    letter-spacing: 0px;
+}
+
+.text-preset-4 {
+    font-family: Figtree;
+    font-size: var(--font-size-text-preset-3, 14px);
+    font-style: normal;
+    font-weight: 800;
+    line-height: 150%;
+    /* 21px */
+    letter-spacing: 0px;
+}
+
+body {
+    background-color: var(--yellow);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 1rem;
+
+}
+
+card {
+    background-color: white;
+    max-width: 24rem;
+    border-radius: 20px;
+    border: 1px solid var(--color-gray-950, #111);
+    background: var(--color-white, #FFF);
+    box-shadow: 8px 8px 0px 0px #000;
+    display: flex;
+    flex-direction: column;
+    padding: var(--spacing-300);
+
+}
+
+
+
+card>img {
+    border-radius: 10px;
+    margin-bottom: var(--spacing-300);
+}
+
+card h2 {
+    background-color: var(--yellow);
+    padding: var(--spacing-50) var(--spacing-150);
+    width: fit-content;
+    border-radius: var(--spacing-50);
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-150);
+    padding-bottom: var(--spacing-150);
+    container-type: inline-size;
+    container-name: content;
+}
+
+@container content (max-width: 270px) {
+    .content h1 {
+        font-size: 20px;
+    }
+
+    .content h2 {
+        font-size: 12px;
+    }
+
+    .content>p {
+        font-size: 14px;
+    }
+
+    .content>.publish-text {
+        font-size: 12px;
+    }
+}
+
+byline {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-150);
+}
+
+byline img {
+    height: 32px;
+    width: 32px;
+}
